@@ -1,10 +1,10 @@
 # Deploy and Host Instagram Comment-to-DM Automation on Railway
 
-Automate Instagram engagement with smart keyword-triggered DMs. This FastAPI backend listens for Instagram comment webhooks and automatically sends personalized direct messages and public replies when users comment with specific trigger keywords on your reels.
+Automate Instagram engagement with smart keyword-triggered DMs. This NestJS backend listens for Instagram comment webhooks and automatically sends personalized direct messages and public replies when users comment with specific trigger keywords on your reels.
 
 ## About Hosting Instagram Comment-to-DM Automation
 
-This template deploys a production-ready FastAPI backend that integrates with Instagram Graph API to automate comment responses. The service receives real-time webhook notifications from Instagram when users comment on your reels, processes the comments based on customizable trigger keywords, and automatically sends DMs and public replies. The backend includes a REST API for managing per-reel configurations, making it easy to customize automation rules for each piece of content. All configurations are stored in a persistent JSON file, eliminating the need for external databases.
+This template deploys a production-ready NestJS backend that integrates with Instagram Graph API to automate comment responses. The service receives real-time webhook notifications from Instagram when users comment on your reels, processes the comments based on customizable trigger keywords, and automatically sends DMs and public replies. The backend includes a REST API for managing per-reel configurations, making it easy to customize automation rules for each piece of content. All configurations are stored in a persistent JSON file, eliminating the need for external databases.
 
 ## Common Use Cases
 
@@ -16,8 +16,8 @@ This template deploys a production-ready FastAPI backend that integrates with In
 
 ## Dependencies for Instagram Comment-to-DM Automation Hosting
 
-- **Python 3.8+**: Runtime environment for FastAPI application
-- **FastAPI**: Modern, fast web framework for building APIs
+- **Node.js 18+**: Runtime environment for NestJS application
+- **NestJS**: A progressive Node.js framework for building efficient and scalable server-side applications
 - **Instagram Graph API**: Meta's API for Instagram Business accounts
 - **Meta Developer App**: Required for webhook configuration and API access
 - **Instagram Business Account**: Must be connected to a Facebook Page
@@ -39,11 +39,11 @@ IG_BUSINESS_ACCOUNT_ID=17841433084275074
 ```
 
 **Webhook Endpoint:**
-```python
-# GET /webhook - Webhook verification
-# POST /webhook - Receive Instagram comment events
+```typescript
+// GET /webhook - Webhook verification
+// POST /webhook - Receive Instagram comment events
 
-# Example webhook payload handling:
+// Example webhook payload handling:
 {
   "object": "instagram",
   "entry": [{

@@ -3,7 +3,7 @@
 <div align="center">
 
 ![Instagram Automation](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![NestJS](https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
@@ -11,9 +11,25 @@
 
 Turn comments into conversations instantly with smart keyword-triggered DMs.
 
-[🎯 Features](#-features) • [🛠️ Setup](#️-quick-setup) • [🚀 Deploy](#-deployment) • [📸 Demo](#-demo)
+[🎯 Features](#-features) • [🏛️ Architecture](#️-architecture) • [🛠️ Setup](#️-quick-setup) • [🚀 Deploy](#-deployment) • [📸 Demo](#-demo)
 
 </div>
+
+---
+
+## 🏛️ Architecture
+
+```text
+Next.js Frontend
+       |
+       v
+NestJS Backend
+       |
+       ├── Instagram API
+       ├── Webhook Processing
+       ├── Automation Configuration
+       └── Admin APIs
+```
 
 ---
 
@@ -45,7 +61,6 @@ Turn comments into conversations instantly with smart keyword-triggered DMs.
 
 - Instagram Business Account
 - Meta Developer App
-- Python 3.8+
 - Node.js 18+
 
 ### 🔑 Get Your Credentials
@@ -67,13 +82,13 @@ Turn comments into conversations instantly with smart keyword-triggered DMs.
 
 ```bash
 cd backend
-pip install -r requirements.txt
+npm install
 cp .env.example .env
 # Edit .env with your credentials
-uvicorn main:app --reload
+npm run start:dev
 ```
 
-🎉 Backend running at `http://localhost:8000`
+🎉 Backend running at `http://localhost:3001`
 
 ### Frontend Setup
 
@@ -81,7 +96,7 @@ uvicorn main:app --reload
 cd frontend
 npm install
 cp .env.local.example .env.local
-# Set NEXT_PUBLIC_API_URL=http://localhost:8000
+# Set NEXT_PUBLIC_API_URL=http://localhost:3001
 npm run dev
 ```
 
@@ -198,7 +213,7 @@ Beautiful, responsive dashboard to manage all your reels in one place.
 
 | Technology | Purpose |
 |------------|---------|
-| 🐍 **FastAPI** | Lightning-fast Python backend |
+| 🦁 **NestJS** | Scalable Node.js backend |
 | ⚛️ **Next.js 14** | Modern React framework |
 | 📘 **TypeScript** | Type-safe frontend |
 | 🎨 **Tailwind CSS** | Beautiful, responsive UI |
